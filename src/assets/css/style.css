@@ -1,0 +1,23 @@
+.content {
+  min-height: 200px;
+}
+
+.footer {
+  background-color: lightgrey;
+  margin: 20px 0;
+}
+
+.footer .inner {
+  padding: 20px;
+}
+
+.message div p {
+  padding: 20px;
+}
+
+.message .error {
+  background-color: #fdd;
+}
+.message .success {
+  background-color: #dfd;
+}

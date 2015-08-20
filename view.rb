@@ -25,13 +25,12 @@ class View < Mustache
     #
     def process_context context
 
-        # Add your own data organisation here
-
-        # If you wish, you can examine context[:src_filename] to determine
-        # which view you are preparing. Alternatively, you can just give
-        # every view an identical context.
-
         add_content_items_to_collections context
+
+        if context[:src_filename].match /contact.php.mustache$/
+            context[:prefix] =
+                File.open( 'build_assets/contact_form_prefix.php' ) { |file| file.read }
+        end
     end
 
 

@@ -1,11 +1,49 @@
+{{{prefix}}}{{! PHP header modifications (e.g. browser redirects) must be done
+before any text (even whitespace) is added to the output. This was the original
+motivation for adding the prefix insertion above. }}<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/css/style.css">
     </head>
     <body>
-        <div class="main-content">
-            {{! Place the page content here. }}
-            {{{yield}}}
+        <div class="container">
+
+            <div class="row">
+                <div class="header">
+                    <h1><a href="/">Our website! (Proud face)</a></h1>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-9">
+                    <div class="content">
+                        {{{yield}}}
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="sidebar">
+                        <h3>This is a sidebar</h3>
+                        <p>You never know. We might need it.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="footer">
+                    <div class="inner">
+                        <p>Do you have a suggestion? Please <a href="/contact.php">contact us</a>.</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" />
     </body>
 </html>

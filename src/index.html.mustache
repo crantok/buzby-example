@@ -1,0 +1,10 @@
+<p>Welcome to our website. Here is a list of our articles.</p>
+<ul>
+    {{#articles}}
+    <li>
+        <h3><a href="{{url_path}}">{{title}}</a></h3>
+        {{{teaser}}}
+        <a href="{{url_path}}">Read more...</a>
+    </li>
+    {{/articles}}
+</ul>
