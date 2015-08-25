@@ -9,10 +9,11 @@ This is a simple example site for Buzby. It features:
 
 All the files above are found in the ./src directory.
 
-Two other things have been changed:
+Other things that are different from vanilla Buzby:
 
 * A build_assets directory has been added, which contains some PHP code for inclusion in the PHP contact page.
 * view.rb has been modified in order to add the above item to the PHP contact page.
+* The article template and the default layout have been spruced up a bit using Twitter Bootstrap.
 
 ## Need more help?
 
